@@ -1,26 +1,28 @@
 .part6 {
-    height: 926px;
-    background-image: url(./part6.jpg);
+    height: auto;
+    background-image: url('./part6.jpg');
+    background-position: 51% 0;
+    background-size: auto 86%;
 }
 
 .part6 .part-in {
-    margin-top: 194px;
+    margin-top: 110px;
     position: relative;
 }
 
 .part6 .swiper-container {
+    width: 94%;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.part6 .swiper-container img {
     width: 100%;
-    padding-bottom: 55px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-left: -10px;
+    height: auto;
 }
 
 .part6 .swiper-pagination {
-    /* width: auto; */
-    /* display: inline-block; */
-    /* right: 6px; */
-    /* left: auto; */
     bottom: 0;
     display: inline-flex;
     justify-content: center;
@@ -43,10 +45,7 @@
 
 .part6 .swiper-button-prev,
 .part6 .swiper-button-next {
-    margin-top: -115px;
-    width: 40px;
-    height: 130px;
-    background-size: 100%;
+    display: none;
 }
 
 .part6 .swiper-button-prev {
@@ -55,4 +54,17 @@
 
 .part6 .swiper-button-next {
     right: -60px;
+}
+
+.part6 .part-pics {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.part6 .pic {
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0px 4px 5.88px 0.12px rgba(17, 127, 187, 0.33);
+    margin-bottom: 0;
 }

@@ -1,8 +1,8 @@
 .part3 {
-    height: 1005px;
-    background-image: url(./part3.jpg);
+    height: auto;
+    background-image: url('./part3.jpg');
 }
 
 .part3 .part-in {
-    margin-top: 211px;
+    margin-top: 240px;
 }

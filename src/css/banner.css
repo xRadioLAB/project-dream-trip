@@ -1,14 +1,5 @@
-.banner {
-    min-height: 700px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
+.banner,
 .banner img {
-    height: 700px;
-    width: 1920px;
-    position: absolute;
-    left: 50%;
-    margin-left: -960px;
+    width: 100%;
+    height: auto;
 }

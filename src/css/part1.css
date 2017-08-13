@@ -1,27 +1,32 @@
 .part1 {
-    height: 605px;
-    background-image: url(./part1.jpg);
+    height: auto;
+    background-image: url('./part1.jpg');
 }
 
 .part-in.part1-in {
-    margin-top: 69px;
+    margin-top: 1em;
 }
 
 .part1-swiper-box,
 .part1-swiper-container {
-    height: 350px;
+    width: 100%;
+    height: auto;
 }
 
 .part1-swiper-box {
-    float: left;
-    width: 508px;
     background-color: #FFF;
-    padding: 19px 16px;
+    padding-top: .8em;
 }
 
 .part1-swiper-container {
-    width: 508px;
+    width: 94%;
+    height: auto;
     margin: 0 auto;
+}
+
+.part1-swiper-container img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -76,15 +81,10 @@
 }
 
 .part1-list {
-    float: right;
-    width: 440px;
-    height: 388px;
     overflow: hidden;
 }
 
 .part1-list-in {
-    width: 404px;
+    width: 94%;
     margin: 19px auto;
 }
-
-.part1-list-list {}

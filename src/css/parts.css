@@ -1,12 +1,13 @@
 .part {
     width: 100%;
-    background-position: center 0;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-position: 33% 0;
+    background-size: auto 36%;
 }
 
 .part-in {
-    width: 1000px;
+    width: 94%;
     margin: 0 auto;
 }
 

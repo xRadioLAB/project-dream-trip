@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: #FFF;
+    background: #fbf9f9;
     color: #000;
 }
 
@@ -32,6 +32,7 @@ li {
 }
 
 a {
+    color: #383838;
     text-decoration: none;
 }
 
@@ -59,7 +60,8 @@ a:hover {
     width: 100%;
 }
 
-.more,
+
+/* .more,
 .more a {
     color: #FFF !important;
 }
@@ -93,4 +95,4 @@ a:hover {
 
 .more-left {
     margin-left: -600px;
-}
+} */

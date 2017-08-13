@@ -1,18 +1,20 @@
 .part-pics {
     position: relative;
-    width: 110%;
+    width: 94%;
+    margin: 0 auto;
 }
 
 .pic {
-    width: 316px;
+    width: 100%;
     background-color: #FFF;
     box-shadow: 0px 4px 5.88px 0.12px rgba(17, 127, 187, 0.33);
+    margin-bottom: 20px;
 }
 
 .pic-img,
 .pic img {
     width: 100%;
-    height: 220px;
+    height: auto;
 }
 
 .pic-img {
@@ -40,29 +42,34 @@
     padding: 15px 10px;
 }
 
-.layout-mod1 .pic {
+
+/* .layout-mod1 .pic {
     float: left;
     margin-right: 26px;
-}
+} */
 
-.layout-mod1 .pic:nth-child(1) {
+
+/* .layout-mod1 .pic:nth-child(1) {
     clear: both;
     margin-left: 684px;
     margin-right: 0;
     margin-bottom: 40px;
-}
+} */
 
-.layout-mod2 .pic {
+
+/* .layout-mod2 .pic {
     float: left;
     margin-right: 26px;
-}
+} */
 
-.layout-mod2 .pic {
+
+/* .layout-mod2 .pic {
     width: 232px;
-}
+} */
 
-.layout-mod2 .pic-img,
+
+/* .layout-mod2 .pic-img,
 .layout-mod2 .pic img {
     width: 100%;
     height: 163px;
-}
+} */

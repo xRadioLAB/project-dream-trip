@@ -1,0 +1,61 @@
+.is-pc .banner {
+    position: relative;
+    height: 165px;
+    background-color: #1a2b47;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-image: url('./banner-bg.png');
+    color: #FFF;
+}
+
+.is-pc .banner-logo {
+    width: 516px;
+    margin-left: -258px;
+    height: 117px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    background-image: url('./logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.is-pc .banner-xinhuanet-logo {
+    width: 116px;
+    margin-left: 445px;
+    height: 68px;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    background-image: url('./xinhuanet-logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.is-pc .banner-video {
+    width: 565px;
+    margin-left: -748px;
+    height: 165px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-image: url('./earth.png');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.is-pc .video {
+    margin-top: -40px;
+    /* opacity: 0.3; */
+}
+
+.is-mobile .banner {
+    height: auto;
+    width: 100%;
+}

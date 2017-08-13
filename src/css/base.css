@@ -1,0 +1,80 @@
+body, html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #FFF;
+    color: #000;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1080f2 !important;
+}
+
+.clearfix:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.top-box {
+    width: 100%;
+}
+
+.more, .more a {
+    color: #FFF !important;
+}
+
+.more {
+    width: 147px;
+    height: 72px;
+    background-image: url('./icon-arrow-top.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: 480px;
+    line-height: 85px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 99;
+}
+
+.more-top {
+    background-image: url('./icon-arrow-bottom.png');
+    bottom: auto;
+    top: 0;
+    line-height: 45px;
+    margin-left: 480px;
+}
+
+.more-left {
+    margin-left: -600px;
+}

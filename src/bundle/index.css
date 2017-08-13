@@ -780,6 +780,17 @@ body,
     height: auto;
 }
 
+/* .banner img {
+    display: none;
+}
+
+.banner {
+    background-image: url('./banner-mobile.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+} */
+
 .footer,
 .footer a {
     color: #000 !important;

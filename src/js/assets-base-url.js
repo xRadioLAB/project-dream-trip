@@ -1,3 +1,3 @@
-export default ({ isDev }) => {
-    return isDev ? './bundle' : 'http://www.xinhuanet.com/cube/bundle';
+export default ({ isDev, url }) => {
+    return isDev ? './bundle' : url;
 };

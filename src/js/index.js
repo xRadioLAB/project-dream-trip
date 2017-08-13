@@ -5,6 +5,7 @@ import getAssetsBaseUrl from './assets-base-url';
 import footer from './footer';
 
 import Swiper from './swiper.jquery';
+import wechatShare from './wechat-share';
 
 
 $(() => {
@@ -16,29 +17,27 @@ $(() => {
         isPc: ispc(),
     };
     const isMobile = !isPc;
-    const assetsBaseUrl = getAssetsBaseUrl({ isDev });
+    const assetsBaseUrl = getAssetsBaseUrl({
+        isDev,
+        url: 'http://www.xinhuanet.com/project-dream-trip/bundle'
+    });
 
     footer({
         $target: $('.part7'),
         isMobile
     });
 
-    const initPage = () => {
-        // const cms = cmsConfig['台湾青年大陆互联网＋梦想之旅1'].list;
-        // for (let prop in cms) {
-        //     const cid = cms[prop].cid;
-        //     console.log('====================================');
-        //     console.log(prop, cid);
-        //     console.log('====================================');
-        //     // $([data-name=${cms}])
-        //     `<div class="swiper-slide part1-slide">
-        //         <a href="#" target="_blank">
-        //             <img src="${img}">
-        //             <p class="part1-slide-title">1</p>
-        //         </a>
-        //     </div>`
-        // }
+    if (isMobile) {
+        const src = `${assetsBaseUrl}/banner-mobile.jpg`;
+        $('.banner img').attr('src', src);
+        wechatShare({
+            title: $('title').text(),
+            substr: $('[name="description"]').attr('content'),
+            src: src,
+        });
+    }
 
+    const initPage = () => {
         // part1 swiper
         $('#part1 .swiper-container').append(`<div class="swiper-pagination swiper-pagination-part1"></div>`);
         var mySwiper = new Swiper('#part1 .swiper-container', {

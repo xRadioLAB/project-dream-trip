@@ -94,6 +94,10 @@ var _swiper = __webpack_require__(6);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
+var _wechatShare = __webpack_require__(7);
+
+var _wechatShare2 = _interopRequireDefault(_wechatShare);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
@@ -108,29 +112,27 @@ $(function () {
         isPc = _isDev$isPc.isPc;
 
     var isMobile = !isPc;
-    var assetsBaseUrl = (0, _assetsBaseUrl2.default)({ isDev: isDev });
+    var assetsBaseUrl = (0, _assetsBaseUrl2.default)({
+        isDev: isDev,
+        url: 'http://www.xinhuanet.com/project-dream-trip/bundle'
+    });
 
     (0, _footer2.default)({
         $target: $('.part7'),
         isMobile: isMobile
     });
 
-    var initPage = function initPage() {
-        // const cms = cmsConfig['台湾青年大陆互联网＋梦想之旅1'].list;
-        // for (let prop in cms) {
-        //     const cid = cms[prop].cid;
-        //     console.log('====================================');
-        //     console.log(prop, cid);
-        //     console.log('====================================');
-        //     // $([data-name=${cms}])
-        //     `<div class="swiper-slide part1-slide">
-        //         <a href="#" target="_blank">
-        //             <img src="${img}">
-        //             <p class="part1-slide-title">1</p>
-        //         </a>
-        //     </div>`
-        // }
+    if (isMobile) {
+        var src = assetsBaseUrl + '/banner-mobile.jpg';
+        $('.banner img').attr('src', src);
+        (0, _wechatShare2.default)({
+            title: $('title').text(),
+            substr: $('[name="description"]').attr('content'),
+            src: src
+        });
+    }
 
+    var initPage = function initPage() {
         // part1 swiper
         $('#part1 .swiper-container').append('<div class="swiper-pagination swiper-pagination-part1"></div>');
         var mySwiper = new _swiper2.default('#part1 .swiper-container', {
@@ -207,9 +209,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (_ref) {
-    var isDev = _ref.isDev;
+    var isDev = _ref.isDev,
+        url = _ref.url;
 
-    return isDev ? './bundle' : 'http://www.xinhuanet.com/cube/bundle';
+    return isDev ? './bundle' : url;
 };
 
 /***/ }),
@@ -4703,6 +4706,27 @@ if (true) {
         return window.Swiper;
     });
 }
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (_ref) {
+    var title = _ref.title,
+        substr = _ref.substr,
+        _ref$script = _ref.script,
+        script = _ref$script === undefined ? ['https://res.wx.qq.com/open/js/jweixin-1.0.0.js', 'http://www.xinhuanet.com/global/public/wxShare.js'] : _ref$script,
+        src = _ref.src;
+
+    $('body').append('\n        <div data-wechat="1" style="display:none">\n            <div class="share-title">' + $.trim(title) + '</div>\n            <div class="share-substr">' + $.trim(substr) + '</div>\n            <img class="share-img" src="' + src + '" width="300" height="300">\n        </div>\n        <script src="' + script[0] + '"></script>\n        <script src="' + script[1] + '"></script>\n    ');
+};
 
 /***/ })
 /******/ ]);

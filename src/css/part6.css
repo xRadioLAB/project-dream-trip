@@ -1,0 +1,58 @@
+.part6 {
+    height: 926px;
+    background-image: url(./part6.jpg);
+}
+
+.part6 .part-in {
+    margin-top: 194px;
+    position: relative;
+}
+
+.part6 .swiper-container {
+    width: 100%;
+    padding-bottom: 55px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -10px;
+}
+
+.part6 .swiper-pagination {
+    /* width: auto; */
+    /* display: inline-block; */
+    /* right: 6px; */
+    /* left: auto; */
+    bottom: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part6 .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #d2d2d2;
+    opacity: 1;
+    /* border-radius: 0; */
+}
+
+.part6 .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #f19149;
+    width: 20px;
+    height: 20px;
+}
+
+.part6 .swiper-button-prev,
+.part6 .swiper-button-next {
+    margin-top: -115px;
+    width: 40px;
+    height: 130px;
+    background-size: 100%;
+}
+
+.part6 .swiper-button-prev {
+    left: -60px;
+}
+
+.part6 .swiper-button-next {
+    right: -60px;
+}

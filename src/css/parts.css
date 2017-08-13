@@ -1,0 +1,19 @@
+.part {
+    width: 100%;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.part-in {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.part-in:after {
+    content: '';
+    height: 0;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}

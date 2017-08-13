@@ -1,5 +1,5 @@
 export default ({
-    $body,
+    $target,
     isMobile
 }) => {
     const date = new Date();
@@ -18,6 +18,5 @@ export default ({
             版权所有 <a ${hrefLtd} ${targetBlank}>新华网股份有限公司</a>
         </div>
     `;
-
-    $body.append(dom);
+    $target.append(dom);
 };

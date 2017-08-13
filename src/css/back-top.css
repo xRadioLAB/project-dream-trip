@@ -1,0 +1,15 @@
+.back-top {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+}
+
+.back-top a {
+    display: block;
+    height: 73px;
+    width: 73px;
+    background-image: url(./back-top.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

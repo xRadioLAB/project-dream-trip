@@ -1,0 +1,8 @@
+.part4 {
+    height: auto;
+    background-image: url('./part4.jpg');
+}
+
+.part4 .part-in {
+    margin-top: 240px;
+}

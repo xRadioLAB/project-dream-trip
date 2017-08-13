@@ -1,0 +1,10 @@
+.part5 {
+    height: auto;
+    background-image: url('./part5.jpg');
+    background-position: 51% 0;
+    background-size: auto 32%;
+}
+
+.part5 .part-in {
+    margin-top: 125px;
+}

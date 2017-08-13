@@ -1,0 +1,19 @@
+.back-top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+.back-top a {
+    border-radius: 18%;
+    border: 2px solid #FFF;
+    display: block;
+    height: 45px;
+    width: 45px;
+    background-image: url(./back-top.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}

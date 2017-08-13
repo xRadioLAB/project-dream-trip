@@ -8,15 +8,215 @@ html
         title #{title}
         meta(name="apple-mobile-web-app-title" content="#{title}")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        script(src="bundle/browser.min.js")
+        include mod-browser
         link(rel="stylesheet" href="bundle/index.css")
-
     body
         .top-box
-            include mod-banner
+            .banner(data-mod="banner" id="back-top")
+                a(href="#")
+                    img(src="bundle/banner.jpg" width="1920" height="700")
+                    h1.hide 台湾青年大陆互联网＋梦想之旅
+        .main
+            .part.part1(id="part1")
+                .part-in.part1-in
+                    .part1-swiper-box.shadow
+                        .swiper-container.part1-swiper-container
+                            .swiper-wrapper(data-name="大图（要闻左侧的）, 11161095")
+                                - for (let i = 1; i <= 5; i++ ) {
+                                    .swiper-slide.part1-slide
+                                        a(href="#" target="_blank")
+                                            <img src="bundle/banner.jpg">
+                                            p.part1-slide-title #{i}
+                                - }
+                        
+                    .part1-list.shadow
+                        .part1-list-in(data-name="要闻, 11161097")
+                            h2.part1-list-title
+                                a(href="#" target="_blank")
+                                    | 标题标题标题标题标题
+                            .part1-list-abs
+                                p abs 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标
+                            ul.part1-list-list.list
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                                li
+                                    a(href="#" target="_blank") 标题标题标题标题标题
+                        
+            .part.part2(id="part2")
+                .part-in.layout-mod1
+                    .part-pics(data-name="实习活动, 11161098")
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
 
+            .part.part3(id="part3")
+                .part-in.layout-mod1
+                    .part-pics(data-name="参访活动, 11161106")
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
 
+            .part.part4(id="part4")
+                .part-in.layout-mod1
+                    .part-pics(data-name="亮点扫描, 11161099")
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+            .part.part5(id="part5")
+                .part-in.layout-mod2
+                    .part-pics(data-name="参访企业巡礼, 11161100")
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                        .pic
+                            a(href="#" target="_blank")
+                                .pic-img
+                                    <img src="bundle/banner.jpg">
+                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+
+            .part.part6(id="part6")
+                .part-in
+                    .swiper-container.part6-swiper-container
+                        .swiper-wrapper(data-name="精彩瞬间, 11161103, 18")
+                            - for (let i = 1; i <= 15; i++ ) {
+                                .swiper-slide.part6-slide
+                                    .part-pics
+                                        .pic
+                                            a(href="#" target="_blank")
+                                                .pic-img
+                                                    <img src="bundle/banner.jpg">
+                                                .pic-title 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+                            - }
+
+            .part.part7(id="part7")
+                .part-in(data-name="两岸青年交流, 11161104")
+                    .part7-item
+                        h2.part7-list-title
+                            a(href="#" target="_blank")
+                                | 标题标题标题标题标题
+                        .part7-pic
+                            a(href="#" target="_blank")
+                                <img src="bundle/banner.jpg" width="150" height="105">
+                        .part7-list-abs
+                            p abs 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标
+                        ul.part7-list-list.list
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                    .part7-item
+                        h2.part7-list-title
+                            a(href="#" target="_blank")
+                                | 标题标题标题标题标题
+                        .part7-pic
+                            a(href="#" target="_blank")
+                                <img src="bundle/banner.jpg" width="150" height="105">
+                        .part7-list-abs
+                            p abs 标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标
+                        ul.part7-list-list.list
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+                            li
+                                a(href="#" target="_blank") 标题标题标题标题标题
+
+        .back-top
+            a(href="#back-top")
+                .hide back-top
 
         script(src="js/jq.js")
+        script(src="http://www.xinhuanet.com/global/lib/xpage/xpage.min.js")
         //- script(src="js/swiper.jquery.js")
         script(src="bundle/index.js")

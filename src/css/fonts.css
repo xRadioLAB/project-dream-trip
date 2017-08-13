@@ -1,11 +1,76 @@
-body, .nav a {
+body,
+.nav a {
     font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
     /*font-family: Microsoft YaHei, Microsoft YaHei Lights, Arial;*/
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
 }
 
-.windows body, .windows .nav a {
+.windows body,
+.windows .nav a {
     /*font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;*/
     font-family: Microsoft YaHei, Microsoft YaHei Lights, Arial;
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+}
+
+.part1-slide-title,
+.part1-slide-title a {
+    color: #FFF !important;
+    font-size: 16px;
+}
+
+
+/* .list {
+    line-height: 32px;
+} */
+
+.list li,
+.list li a {
+    line-height: 28px;
+}
+
+.list li {
+    position: relative;
+    padding-left: 0.7em;
+}
+
+.list li:after {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    background-color: #333;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.part7 .list {
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 1em;
+}
+
+.part7 .list li {
+    position: relative;
+    padding-left: 0.7em;
+}
+
+.part7 .list li:after {
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    background-color: #333;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.part7 .list li,
+.part7 .list li a {
+    line-height: 40px;
+    font-weight: 300;
+    font-size: 18px;
 }

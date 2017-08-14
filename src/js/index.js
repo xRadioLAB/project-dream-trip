@@ -6,7 +6,13 @@ import footer from './footer';
 
 import Swiper from './swiper.jquery';
 import wechatShare from './wechat-share';
+import setBlockHide from './set-block-hide';
 
+setBlockHide({
+    regexp: '隐藏整个区块',
+    regexp2: '隐藏这个区块',
+    $array: $('body').find('.part'),
+});
 
 $(() => {
     const $window = $(window);
@@ -41,9 +47,11 @@ $(() => {
         // part1 swiper
         $('#part1 .swiper-container').append(`<div class="swiper-pagination swiper-pagination-part1"></div>`);
         var mySwiper = new Swiper('#part1 .swiper-container', {
+            loop: true,
             autoplay: 5000,//可选选项，自动滑动
             pagination: '#part1 .swiper-pagination',
             paginationClickable: true,
+            spaceBetween: 1,
         });
 
         // part6 swiper

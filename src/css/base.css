@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    color: #1080f2 !important;
+    color: orange !important;
 }
 
 .part-in:after,

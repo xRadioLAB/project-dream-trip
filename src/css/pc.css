@@ -99,6 +99,32 @@
     .part1-swiper-container {
         margin: 0 auto;
     }
+    .part1 .swiper-pagination-part1 {
+        width: auto;
+        display: inline-block;
+        right: 6px;
+        left: auto;
+        bottom: 8px;
+        pointer-events: auto;
+    }
+    .part1 .swiper-pagination-part1 .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #bfbfbf;
+        opacity: 1;
+        border-radius: 0;
+    }
+    .part1 .swiper-pagination-part1 .swiper-pagination-bullet-active {
+        background-color: #cd383a;
+    }
+    .part1-slide-title span {
+        display: block;
+        width: 78%;
+        margin-left: 8px;
+        margin-right: 0;
+        padding: 0;
+        text-align: left;
+    }
     .part1-list {
         float: right;
         width: 440px;

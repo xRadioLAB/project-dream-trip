@@ -98,7 +98,17 @@ var _wechatShare = __webpack_require__(7);
 
 var _wechatShare2 = _interopRequireDefault(_wechatShare);
 
+var _setBlockHide = __webpack_require__(8);
+
+var _setBlockHide2 = _interopRequireDefault(_setBlockHide);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _setBlockHide2.default)({
+    regexp: '隐藏整个区块',
+    regexp2: '隐藏这个区块',
+    $array: $('body').find('.part')
+});
 
 $(function () {
     var $window = $(window);
@@ -136,9 +146,11 @@ $(function () {
         // part1 swiper
         $('#part1 .swiper-container').append('<div class="swiper-pagination swiper-pagination-part1"></div>');
         var mySwiper = new _swiper2.default('#part1 .swiper-container', {
+            loop: true,
             autoplay: 5000, //可选选项，自动滑动
             pagination: '#part1 .swiper-pagination',
-            paginationClickable: true
+            paginationClickable: true,
+            spaceBetween: 1
         });
 
         // part6 swiper
@@ -4727,6 +4739,39 @@ exports.default = function (_ref) {
 
     $('body').append('\n        <div data-wechat="1" style="display:none">\n            <div class="share-title">' + $.trim(title) + '</div>\n            <div class="share-substr">' + $.trim(substr) + '</div>\n            <img class="share-img" src="' + src + '" width="300" height="300">\n        </div>\n        <script src="' + script[0] + '"></script>\n        <script src="' + script[1] + '"></script>\n    ');
 };
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var setBlockHide = function setBlockHide(_ref) {
+    var regexp = _ref.regexp,
+        regexp2 = _ref.regexp2,
+        $array = _ref.$array;
+
+    if ($array && regexp) {
+        var isHide = function isHide(text) {
+            return text.indexOf(regexp) !== -1 || text.indexOf(regexp2) !== -1;
+        };
+        $array.each(function (i, e) {
+            var $e = $(e);
+            var text = $e.text();
+            var _isHide = isHide(text);
+            // console.log(text, _isHide);
+            if (_isHide) {
+                $e.addClass('hide');
+            }
+        });
+    }
+};
+
+exports.default = setBlockHide;
 
 /***/ })
 /******/ ]);

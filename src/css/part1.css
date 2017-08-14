@@ -38,21 +38,33 @@
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 6px 12px;
+    padding: 6px 0;
+}
+
+.part1-slide-title span {
+    display: block;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 12px;
+    /* background: red; */
 }
 
 .part1 .swiper-pagination-part1 {
-    width: auto;
+    width: 100%;
     display: inline-block;
-    right: 6px;
+    right: 0;
     left: auto;
-    bottom: 8px;
+    bottom: 0;
+    pointer-events: none;
 }
 
 .part1 .swiper-pagination-part1 .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
     background-color: #bfbfbf;
     opacity: 1;
-    border-radius: 0;
 }
 
 .part1 .swiper-pagination-part1 .swiper-pagination-bullet-active {
@@ -70,7 +82,7 @@
 }
 
 .part1-list-abs p {
-    height: 80px;
+    max-height: 80px;
     overflow: hidden;
 }
 

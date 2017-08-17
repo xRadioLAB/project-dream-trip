@@ -66,6 +66,7 @@ $(() => {
             slidesPerView: isMobile ? 1 : 3,
             slidesPerColumn: 2,
             spaceBetween: isMobile ? 10 : 26,
+            slidesPerColumnFill: 'row',
             // autoplay: 5000,//可选选项，自动滑动
             pagination: '#part6 .swiper-pagination',
             paginationClickable: true,

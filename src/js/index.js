@@ -28,11 +28,6 @@ $(() => {
         url: 'http://www.xinhuanet.com/project-dream-trip/bundle'
     });
 
-    footer({
-        $target: $('.part7'),
-        isMobile
-    });
-
     if (isMobile) {
         const src = `${assetsBaseUrl}/banner-mobile.jpg`;
         $('.banner img').attr('src', src);
@@ -42,6 +37,13 @@ $(() => {
             src: src,
         });
     }
+
+    footer({
+        $target: $('#part7'),
+        isMobile
+    });
+
+
 
     const initPage = () => {
         // part1 swiper

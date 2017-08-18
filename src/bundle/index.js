@@ -60,41 +60,143 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = {"title":"台湾青年大陆互联网＋梦想之旅","pos":"新华网>台湾频道>专访专题>台湾青年大陆互联网梦想之旅","url":"http://www.xinhuanet.com/tw/zhuanti/twqndlmxzl/index.htm","isFreeMod":true,"台湾青年大陆互联网＋梦想之旅1":{"list":{"大图（要闻左侧的）":{"nid":"11161095","cid":"11160643"},"要闻":{"nid":"11161097","cid":"11160645"},"实习活动":{"nid":"11161098","cid":"11160646"},"参访活动":{"nid":"11161106","cid":"11160654"},"亮点扫描":{"nid":"11161099","cid":"11160647"},"参访企业巡礼":{"nid":"11161100","cid":"11160648"},"精彩瞬间":{"nid":"11161103","cid":"11160651"},"两岸青年交流":{"nid":"11161104","cid":"11160652"}}}}
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _cmsConfig = __webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    var href = window.location.href;
+    return (/dev/.test(href) || /localhost/.test(href) || /117:3000/.test(href)
+    );
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    var browser = window.BRO;
+    return browser && (browser.device === 'mac' || browser.device === 'windows');
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (_ref) {
+    var isDev = _ref.isDev,
+        url = _ref.url;
+
+    return isDev ? './bundle' : url;
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (_ref) {
+    var $target = _ref.$target,
+        isMobile = _ref.isMobile;
+
+    var date = new Date();
+    var targetBlank = 'target="_blank"';
+    var hrefCom = 'href="http://www.xinhuanet.com"';
+    var hrefLtd = 'href="http://www.xinhuanet.ltd"';
+    var mobileBr = isMobile ? '<br>' : '';
+    var dom = '\n        <div class="footer">\n            Copyright &copy; 2000 - ' + date.getFullYear() + ' \n            <a ' + hrefCom + ' ' + targetBlank + '>XINHUANET.com</a>\n            ' + mobileBr + '\n            All Rights Reserved.<br>\n            \u5236\u4F5C\u5355\u4F4D\uFF1A<a ' + hrefLtd + ' ' + targetBlank + '>\u65B0\u534E\u7F51\u80A1\u4EFD\u6709\u9650\u516C\u53F8</a>\n            ' + mobileBr + '\n            \u7248\u6743\u6240\u6709 <a ' + hrefLtd + ' ' + targetBlank + '>\u65B0\u534E\u7F51\u80A1\u4EFD\u6709\u9650\u516C\u53F8</a>\n        </div>\n    ';
+    $target.append(dom);
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (_ref) {
+    var title = _ref.title,
+        substr = _ref.substr,
+        _ref$script = _ref.script,
+        script = _ref$script === undefined ? ['https://res.wx.qq.com/open/js/jweixin-1.0.0.js', 'http://www.xinhuanet.com/global/public/wxShare.js'] : _ref$script,
+        src = _ref.src;
+
+    $('body').append('\n        <div data-wechat="1" style="display:none">\n            <div class="share-title">' + $.trim(title) + '</div>\n            <div class="share-substr">' + $.trim(substr) + '</div>\n            <img class="share-img" src="' + src + '" width="300" height="300">\n        </div>\n        <script src="' + script[0] + '"></script>\n        <script src="' + script[1] + '"></script>\n    ');
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _cmsConfig = __webpack_require__(0);
 
 var _cmsConfig2 = _interopRequireDefault(_cmsConfig);
 
-var _isDev = __webpack_require__(2);
+var _isDev = __webpack_require__(1);
 
 var _isDev2 = _interopRequireDefault(_isDev);
 
-var _isPc = __webpack_require__(3);
+var _isPc = __webpack_require__(2);
 
 var _isPc2 = _interopRequireDefault(_isPc);
 
-var _assetsBaseUrl = __webpack_require__(4);
+var _assetsBaseUrl = __webpack_require__(3);
 
 var _assetsBaseUrl2 = _interopRequireDefault(_assetsBaseUrl);
 
-var _footer = __webpack_require__(5);
+var _footer = __webpack_require__(4);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _swiper = __webpack_require__(6);
+var _swiper = __webpack_require__(7);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
-var _wechatShare = __webpack_require__(7);
+var _wechatShare = __webpack_require__(5);
 
 var _wechatShare2 = _interopRequireDefault(_wechatShare);
 
@@ -127,11 +229,6 @@ $(function () {
         url: 'http://www.xinhuanet.com/project-dream-trip/bundle'
     });
 
-    (0, _footer2.default)({
-        $target: $('.part7'),
-        isMobile: isMobile
-    });
-
     if (isMobile) {
         var src = assetsBaseUrl + '/banner-mobile.jpg';
         $('.banner img').attr('src', src);
@@ -141,6 +238,11 @@ $(function () {
             src: src
         });
     }
+
+    (0, _footer2.default)({
+        $target: $('#part7'),
+        isMobile: isMobile
+    });
 
     var initPage = function initPage() {
         // part1 swiper
@@ -172,88 +274,7 @@ $(function () {
 });
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = {"title":"台湾青年大陆互联网＋梦想之旅","pos":"新华网>台湾频道>专访专题>台湾青年大陆互联网梦想之旅","url":"http://www.xinhuanet.com/tw/zhuanti/twqndlmxzl/index.htm","isFreeMod":true,"台湾青年大陆互联网＋梦想之旅1":{"list":{"大图（要闻左侧的）":{"nid":"11161095","cid":"11160643"},"要闻":{"nid":"11161097","cid":"11160645"},"实习活动":{"nid":"11161098","cid":"11160646"},"参访活动":{"nid":"11161106","cid":"11160654"},"亮点扫描":{"nid":"11161099","cid":"11160647"},"参访企业巡礼":{"nid":"11161100","cid":"11160648"},"精彩瞬间":{"nid":"11161103","cid":"11160651"},"两岸青年交流":{"nid":"11161104","cid":"11160652"}}}}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    var href = window.location.href;
-    return (/dev/.test(href) || /localhost/.test(href) || /117:3000/.test(href)
-    );
-};
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    var browser = window.BRO;
-    return browser && (browser.device === 'mac' || browser.device === 'windows');
-};
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (_ref) {
-    var isDev = _ref.isDev,
-        url = _ref.url;
-
-    return isDev ? './bundle' : url;
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (_ref) {
-    var $target = _ref.$target,
-        isMobile = _ref.isMobile;
-
-    var date = new Date();
-    var targetBlank = 'target="_blank"';
-    var hrefCom = 'href="http://www.xinhuanet.com"';
-    var hrefLtd = 'href="http://www.xinhuanet.ltd"';
-    var mobileBr = isMobile ? '<br>' : '';
-    var dom = '\n        <div class="footer">\n            Copyright &copy; 2000 - ' + date.getFullYear() + ' \n            <a ' + hrefCom + ' ' + targetBlank + '>XINHUANET.com</a>\n            ' + mobileBr + '\n            All Rights Reserved.<br>\n            \u5236\u4F5C\u5355\u4F4D\uFF1A<a ' + hrefLtd + ' ' + targetBlank + '>\u65B0\u534E\u7F51\u80A1\u4EFD\u6709\u9650\u516C\u53F8</a>\n            ' + mobileBr + '\n            \u7248\u6743\u6240\u6709 <a ' + hrefLtd + ' ' + targetBlank + '>\u65B0\u534E\u7F51\u80A1\u4EFD\u6709\u9650\u516C\u53F8</a>\n        </div>\n    ';
-    $target.append(dom);
-};
-
-/***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4719,27 +4740,6 @@ if (true) {
         return window.Swiper;
     });
 }
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (_ref) {
-    var title = _ref.title,
-        substr = _ref.substr,
-        _ref$script = _ref.script,
-        script = _ref$script === undefined ? ['https://res.wx.qq.com/open/js/jweixin-1.0.0.js', 'http://www.xinhuanet.com/global/public/wxShare.js'] : _ref$script,
-        src = _ref.src;
-
-    $('body').append('\n        <div data-wechat="1" style="display:none">\n            <div class="share-title">' + $.trim(title) + '</div>\n            <div class="share-substr">' + $.trim(substr) + '</div>\n            <img class="share-img" src="' + src + '" width="300" height="300">\n        </div>\n        <script src="' + script[0] + '"></script>\n        <script src="' + script[1] + '"></script>\n    ');
-};
 
 /***/ }),
 /* 8 */

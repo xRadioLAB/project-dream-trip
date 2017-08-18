@@ -1,46 +1,61 @@
-const cmsConfig = {
-    "title": "台湾青年大陆互联网+梦想之旅",
-    "pos": "台湾频道>专访专题>台湾青年大陆互联网+梦想之旅",
-    "url": "http://www.xinhuanet.com/tw/zhuanti/twqndlmxzl/index.htm",
-    "isFreeMod": true,
-    "台湾青年大陆互联网+梦想之旅1":
-    {
-        "list": {
-            "要闻": { "nid": "11161097", "cid": "11160645" }
-        }
-    },
-    "台湾青年大陆互联网+梦想之旅2": {
-        "list": {
-            "亮点扫描": { "nid": "11161099", "cid": "11160647" }
-        }
-    },
-    "台湾青年大陆互联网+梦想之旅3": {
-        "list": {
-            "两岸青年交流": { "nid": "11161104", "cid": "11160652" }
-        }
-    }
-};
+import isdev from './is-dev';
+import ispc from './is-pc';
+import getAssetsBaseUrl from './assets-base-url';
+import footer from './footer';
+import wechatShare from './wechat-share';
 
-window.XH_GLOBAL = {
-    "dataImg": true,
-    "pageNid": ["1176508"],
-    "pageCnt": "40",
-    "pageTp": "1",
-    "pageName": "",
-    "themeColor": "grey"
-};
+// pages
+import getXpageNid from './get-xpage-nid';
 
-var isTouchDevice = 'ontouchstart' in window;
-var userAgent = navigator.userAgent.toLowerCase(),
-    l = window.location;
-if (isTouchDevice) {
-    var currurl = location.href;
-    if (currurl.indexOf("?app=0") > 0) {
-        document.getElementsByTagName("body")[0].setAttribute("class", "app");
+$(() => {
+    const $window = $(window);
+    const $html = $('html');
+    const $body = $('body');
+    const { isDev, isPc } = {
+        isDev: isdev(),
+        isPc: ispc(),
+    };
+    const isMobile = !isPc;
+    const assetsBaseUrl = getAssetsBaseUrl({
+        isDev,
+        url: 'http://www.xinhuanet.com/project-dream-trip/bundle'
+    });
+
+    if (isMobile) {
+        const src = `${assetsBaseUrl}/banner-mobile.jpg`;
+        $('.banner img').attr('src', src);
+        wechatShare({
+            title: $('title').text(),
+            substr: $('[name="description"]').attr('content'),
+            src: src,
+        });
     }
-    if (userAgent.indexOf("mi pad") != -1 || userAgent.indexOf("xiaomi/miuibrowser") != -1 || userAgent.indexOf(
-        "ipad") != -1) {
-        var padViewPort = document.getElementById("viewport");
-        padViewPort.content = "";
-    }
-}
+
+    footer({
+        $target: $('body'),
+        isMobile
+    });
+
+    const initPage = () => {
+        const xpageConfig = getXpageNid({ colunmName: '#column-title' });
+        const xpage = new XHW.Xpage('#data', {
+            mode: 'listView', // 插件模式
+            nid: xpageConfig.cid, // 栏目id
+            pageSize: 20, // 每页条数
+            moreButton: '.xpage-more-btn', // 更多按钮
+            orderby: 1, // 0: 时间顺序, 1: 签发库顺序
+            renderItem: function (item, index, list) { // 列表渲染方法
+                return (`
+                    <li>
+                        <a href="${item.LinkUrl}" target="_blank">
+                            ${item.Title}
+                        </a>
+                    </li>
+                `);
+            }
+        });
+    };
+
+
+    initPage();
+});

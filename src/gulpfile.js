@@ -96,6 +96,7 @@ gulp.task('js', function () {
 gulp.task('css', function () {
     return gulp.src([
         'css/index.css',
+        'css/pages.css',
     ])
         .pipe(postcss([
             atImport()
@@ -109,7 +110,7 @@ gulp.task('css', function () {
 
 // watch
 gulp.task('autowatch', function () {
-    gulp.watch('pug/*.pug', ['pug']);
+    // gulp.watch('pug/*.pug', ['pug']);
     // gulp.watch('js/*.js', ['js']);
     gulp.watch('css/*.css', ['css']);
 });

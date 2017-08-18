@@ -1,0 +1,29 @@
+.more {
+    font-size: 18px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+    padding: 6px 30px;
+    background-color: #007bff;
+    color: #FFF;
+    margin: 6px auto 0;
+    width: 200px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.more:hover {
+    background-color: #FDAB4D;
+    color: #FFF !important;
+}
+
+.more:active {
+    background-color: #FFF;
+    color: #000 !important;
+}
+
+.part7 .more {
+    margin-bottom: 40px;
+}
